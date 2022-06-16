@@ -24,8 +24,10 @@ Segue a lista com os principais comandos utilizados durante o curso:
  
 
 * Gerenciando o cluster com managers
-  * __```docker start ID_CONTAINER```__ - inicia o container com id em questão.
-
+  * __```docker swarm leave --force```__ - pelo ssh da VM manager é forçada a saída do cluster swarm, consequentemente toda a configuração se perde, e os workers ficam sem manage.
+  * __```docker swarm init --force-new-clust --advertise-addr ENDERECO_IP```__ - pelo ssh da VM manager, força o início de novas configurações de outro cluster ou de backup.
+  * __```docker swarm join-token manager```__ - pelo ssh da VM manager exibe o comando para adcionar novos nós managers.
+  * __```docker node ls --format {{.Hostname}} {{.ManagerStatus}}```__ - exibe apenas o resultado da coluna de HOSTNAME e MANAGERSTATUS do comando docker node ls.
 
 * Separando as responsabilidades
   * __```docker rm ID_CONTAINER```__ - remove o container com id em questão.
