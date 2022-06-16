@@ -1,5 +1,7 @@
 [<< AULA ANTERIOR](https://github.com/pvreboucas/docker-swarm-orquestrador/blob/aula-02/aulas/07-tarefas-e-o-routing-mesh.md)
 
+# O papel do manager
+
 Se tentarmos usar o comando ```docker swarm leave``` por dentro do nó manager nós receberemos uma mensagem de aviso para não fazermos isso,
 mas se mesmo quisermos tirar o manager do cluster swarm usamos o parâmetro ``` docker swarm leave --force```. E quais serão as consequências?
 
