@@ -13,7 +13,7 @@ Agora o cluster será iniciado, e na descrição é apresentado o ID de identifi
 ``` 
 To add a worker to this swarm, run the following command: 
 
-docker swarm join --token TOKEN 192.168.0.2 
+docker swarm join --token TOKEN 192.168.0.2:2376 
 ```
 
 comandos:
