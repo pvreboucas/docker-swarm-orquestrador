@@ -13,7 +13,14 @@ Segue a lista com os principais comandos utilizados durante o curso:
   * __```docker info```__ - usado por dentro do terminal da VM traz a informação se está presente em um cluster swarm.
 
 * Responsabilidade dos nós workers
-  * __```docker run NOME_DA_IMAGEM```__ - cria um container com a respectiva imagem passada como parâmetro.
+  * __```docker swarm join --token TOKEN ENDERECO_IP```__ - adiciona uma VM como worker de um nó com TOKEN e ENDERECO_IP.
+  * __```docker swarm join-token worker```__ - pelo ssh da VM manager é apresentado o comando com token para adicionar workers.
+  * __```docker swarm leave```__ - pelo ssh da VM worker é alterado o status do nó de Ready para Down.
+  * __```docker node ls```__ - pelo ssh da VM manager é apresentada a lista de nós existentes do cluster swarm.
+  * __```docker node inspect VM_WORKER```__ - pelo ssh da VM manager é inspecionado um nó worker existente no cluster swarm.
+  * __```docker service create -p 8080:3000 NOME_IMAGEM```__ - pelo ssh da VM manager é criado um serviço dentro de um swarm direcionando a imagem do container para os workers.
+  * __```docker service ls```__ - pelo ssh da VM manager é apresentada a lista de serviços existentes do cluster swarm.
+  * __```docker service ps ID_SERVICO```__ - pelo ssh da VM manager é apresentado detalhes do serviço ID existente no cluster swarm.
  
 
 * Gerenciando o cluster com managers
