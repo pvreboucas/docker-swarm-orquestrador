@@ -1,6 +1,8 @@
 [<< ANTERIOR](https://github.com/pvreboucas/docker-swarm-orquestrador/tree/aula-03/aulas)
 
-# Para saber mais: Outras restrições
+# Separando as responsabilidades
+
+## Para saber mais: Outras restrições
 
 No último vídeo vimos como podemos adicionar restrições a um serviço utilizando o comando:
 
@@ -35,7 +37,7 @@ docker service update --constraint-rm node.hostname==vm4 ci10k3u7q6ti
 
 Após esse momento, quaisquer novas réplicas criadas para esse serviço poderão ser alocadas sem restrição alguma!
 
-# O que aprendemos?
+## O que aprendemos?
 
 Nesta aula, aprendemos:
 
