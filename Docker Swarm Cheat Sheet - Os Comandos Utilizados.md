@@ -51,6 +51,7 @@ Segue a lista com os principais comandos utilizados durante o curso:
   * __```docker service rm $(docker service ls -q)```__ - pelo ssh da VM de um nó manager, apaga-se todos os serviços de um cluster.
   * __```docker node update --availability drain VM```__ - pelo ssh da VM de um nó manager, atualiza a o Availability de Active para Drain para impedir que o nó execute tarefas.
   * __```docker service update --constraint-add node.role==worker ID_SERVICE```__ - pelo ssh de uma VM manager é restringido um serviço para que apenas nós workers o executem.
+  * __[Outras Restrições](https://github.com/pvreboucas/docker-swarm-orquestrador/blob/aula-04/aulas/README.md)__
 
 
 * Serviços globais e replicados
