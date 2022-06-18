@@ -2,7 +2,7 @@
 
 # Deploy com Docker Stack
 
-# Para saber mais: Volumes no Swarm
+## Para saber mais: Volumes no Swarm
 
 Por padrão, tanto o **Docker** no modo standalone quanto o **Docker Swarm**, partilham apenas de um driver **local** para uso de volumes. 
 Isso quer dizer que o **Docker Swarm** não possui, até então, solução nativa para distribuir volumes entre os nós.
@@ -13,7 +13,7 @@ Logo, os volumes **não** são compartilhados entre os diferentes nós do cluste
 Existem soluções que não são nativas do Docker Swarm para utilizar volumes distribuídos entre nós,
 que podem ser consultadas na [Docker Store](https://store.docker.com/search?category=volume&q=&type=plugin).
 
-# O que aprendemos?
+## O que aprendemos?
 
 Nesta aula, aprendemos:
 
