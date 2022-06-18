@@ -32,12 +32,17 @@ Segue a lista com os principais comandos utilizados durante o curso:
   * __```docker node inspect VM_WORKER```__ - pelo ssh da VM manager é inspecionado um nó worker existente no cluster swarm.
   * __```docker service create -p 8080:3000 NOME_IMAGEM```__ - pelo ssh da VM manager é criado um serviço dentro de um swarm direcionando a imagem do container para os workers.
   * __```docker service ls```__ - pelo ssh da VM manager é apresentada a lista de serviços existentes do cluster swarm.
+
+  |      ID       |            NAME            |        MODE       |   REPLICAS   |           IMAGES             |        PORTS        |
+  | :-----------: | :------------------------: | :---------------: | :----------: |  :-------------------------: | :-----------------: |
+  | ulaxnhi770p4  |      exciting_portrais     |    replicated     |      1/1     | aluracursos/barbearia:latest |  \*:8080->3000/tcp  |
+
   * __```docker service ps ID_SERVICO```__ - pelo ssh da VM manager é apresentado detalhes do serviço ID existente no cluster swarm.
   
- |      ID       |            NAME            |              IMAGE              |     NODE     |     DESIRED STATE       |     CURRENT STATE          |   ERROR  |  PORTS   | 
-| :-----------: | :------------------------: | :-----------------------------: | :----------: |  :--------------------: | :------------------------: | :------- | :------: |
-| x06k7hbl96lz  |     objective.allen.1      |  aluracursos/barbearia:latest   |      vm3     |        Running          |  Running 6 minutes ago     |          |          |
-| n27sa3uw017c  |     \_objective.allen.1    |  aluracursos/barbearia:latest   |      vm2     |        Shutdown         |  Failed about a second ago |          |          |
+  |      ID       |            NAME            |              IMAGE              |     NODE     |     DESIRED STATE       |     CURRENT STATE          |   ERROR  |  PORTS   | 
+  | :-----------: | :------------------------: | :-----------------------------: | :----------: |  :--------------------: | :------------------------: | :------- | :------: |
+  | x06k7hbl96lz  |     objective.allen.1      |  aluracursos/barbearia:latest   |      vm3     |        Running          |  Running 6 minutes ago     |          |          |
+  | n27sa3uw017c  |     \_objective.allen.1    |  aluracursos/barbearia:latest   |      vm2     |        Shutdown         |  Failed about a second ago |          |          |
 
 * Gerenciando o cluster com managers
   * __```docker swarm leave --force```__ - pelo ssh da VM manager é forçada a saída do cluster swarm, consequentemente toda a configuração se perde, e os workers ficam sem manage.
@@ -56,7 +61,9 @@ Segue a lista com os principais comandos utilizados durante o curso:
 
 
 * Serviços globais e replicados
-  * __```docker build -f Dockerfile```__ - cria uma imagem a partir de um Dockerfile.
+  * __``` docker service update --replicas QUANTIDADE ID_SERVICO ```__ - pelo ssh de um manager, atualiza a quantidade de tarefas de um serviço a serem balanceadas entre os workers.
+  * __``` docker service scale ID_SERVICO=QUANTIDADE ```__ - pelo ssh de um manager, atualiza a quantidade de tarefas de um serviço a serem balanceadas entre os workers.
+  * __```docker service create -p 8080:3000 --mode global NOME_IMAGEM```__ - pelo ssh da VM manager é criado um serviço, em modo global, dentro de um swarm direcionando a imagem do container para os workers.
   
 * Driver Overlay
   * __```docker login```__ - inicia o processo de login no Docker Hub.
