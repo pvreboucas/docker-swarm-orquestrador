@@ -6,6 +6,8 @@ No curso anterior, quando trabalhávamos com o docker em standalone, em um únic
 
 No docker swarm não é diferente, para definirmos a configuração do serviço no arquivo .yml usamos a chave *services*.
 
-Agora construiremos vários serviços em clusters designados através do [docker-compose.yml](https://github.com/pvreboucas/docker-swarm-orquestrador/blob/aula-07/docker-compose.yml)   
+Agora construiremos vários serviços em clusters designados através do [docker-compose.yml](https://github.com/pvreboucas/docker-swarm-orquestrador/blob/aula-07/docker-compose.yml) com a seguinte arquitetura de dependências entre os serviços:
+
+![arquitetura](https://github.com/dockersamples/example-voting-app/blob/master/architecture.png)
 
 [PRÓXIMA AULA >>](https://github.com/pvreboucas/docker-swarm-orquestrador/blob/aula-07/aulas/07-subindo-a-stack.md)
