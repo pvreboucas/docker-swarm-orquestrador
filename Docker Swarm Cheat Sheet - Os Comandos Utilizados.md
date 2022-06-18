@@ -66,7 +66,9 @@ Segue a lista com os principais comandos utilizados durante o curso:
   * __```docker service create -p 8080:3000 --mode global NOME_IMAGEM```__ - pelo ssh da VM manager é criado um serviço, em modo global, dentro de um swarm direcionando a imagem do container para os workers.
   
 * Driver Overlay
-  * __```docker login```__ - inicia o processo de login no Docker Hub.
+  * __```docker service create --name NOME_SERVICO```__ - pelo ssh da VM manager é criado um serviço dentro de um swarm indicando um nome para este.
+  * __```docker network driver -d overlay NOME_REDE_OVERLAY```__ - cria uma rede docker do tipo overlay.
+  * __```docker service create --name NOME_SERVICO --network NOME_REDE_OVERLAY```__ - cria um serviço com uma rede overlay previamente criada.
  
 
 * Deploy com Docker Stack
