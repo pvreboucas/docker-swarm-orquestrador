@@ -1,6 +1,8 @@
 [<< ANTERIOR](https://github.com/pvreboucas/docker-swarm-orquestrador/tree/aula-01/aulas)
 
-# O que aprendemos?
+# Responsabilidade dos nós workers
+
+## O que aprendemos?
 
 Nesta aula, aprendemos:
 
