@@ -69,6 +69,7 @@ Segue a lista com os principais comandos utilizados durante o curso:
   * __```docker service create --name NOME_SERVICO```__ - pelo ssh da VM manager é criado um serviço dentro de um swarm indicando um nome para este.
   * __```docker network driver -d overlay NOME_REDE_OVERLAY```__ - cria uma rede docker do tipo overlay.
   * __```docker service create --name NOME_SERVICO --network NOME_REDE_OVERLAY```__ - cria um serviço com uma rede overlay previamente criada.
+  * __```docker network create -d overlay --attachable NOME_REDE_OVERLAY```__ - cria uma rede docker do tipo overlay com parâmetro attachable, esse parâmetro permite que containers em um mesmo host de um cluster consigam se comunicar. Permite que serviços e containers "standalone" se comuniquem na mesma rede. 
  
 
 * Deploy com Docker Stack
