@@ -2,7 +2,7 @@
 
 # Driver Overlay
 
-# Para saber mais: Containers e Overlay
+## Para saber mais: Containers e Overlay
 
 Por mais que o driver *overlay* seja responsável por comunicar múltiplos hosts em uma mesma rede,
 também podemos conectar containers em escopo local criados com o comando *docker container run* em redes criadas com esse driver.
@@ -15,7 +15,7 @@ docker network create -d overlay --attachable my_overlay
 
 Com o comando acima, conseguiremos conectar tanto serviços como containers __"standalone"__ em nossa rede *my_overlay*.
 
-# O que aprendemos?
+## O que aprendemos?
 
 Nesta aula, aprendemos:
 
