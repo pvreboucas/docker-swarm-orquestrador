@@ -8,7 +8,7 @@ vimos no curso anterior que o docker trabalha com os seguintes tipos de rede:
 * __bridge__: permite comunicação entre diferentes contâiners em um mesmo host;
 * __host__: habilita a comunicação do contâiner com a máquina host;
 * __null__: inexistência de rede;
-* __overlay__: rede padrão de um cluster swarm.
+* __overlay__: rede padrão de um cluster swarm, permite a comunicação de diferentes hosts em um mesmo cluster.
 
 A novidade está no tipo **overlay**, se invocarmos o comando 
 
