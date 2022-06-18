@@ -1,6 +1,8 @@
 [<< ANTERIOR](https://github.com/pvreboucas/docker-swarm-orquestrador/tree/aula-04/aulas)
 
-# Para saber mais: service scale
+# Serviços globais e replicados
+
+## Para saber mais: service scale
 
 Vamos supor que temos um serviço com id ci10k3u7q6ti. Como podemos escalar esse serviço para ter 5 réplicas?
 
@@ -15,7 +17,7 @@ docker service scale ci10k3u7q6ti=5
 
 Nesse caso, definimos 5 réplicas para o serviço. Os dois comandos produzem o mesmo resultado, o segundo é apenas uma forma resumida do primeiro comando.
 
-# O que aprendemos?
+## O que aprendemos?
 
 Nesta aula, aprendemos:
 
