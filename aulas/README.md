@@ -1,6 +1,8 @@
 [<< ANTERIOR](https://github.com/pvreboucas/docker-swarm-orquestrador/tree/aula-02/aulas)
 
-# O que aprendemos?
+# Separando o cluster com managers
+
+## O que aprendemos?
 
 Nesta aula, aprendemos:
 
