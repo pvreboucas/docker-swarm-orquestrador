@@ -39,10 +39,10 @@ Segue a lista com os principais comandos utilizados durante o curso:
 
   * __```docker service ps ID_SERVICO```__ - pelo ssh da VM manager é apresentado detalhes do serviço ID existente no cluster swarm.
   
-  |      ID       |            NAME            |              IMAGE              |     NODE     |     DESIRED STATE       |     CURRENT STATE          |   ERROR  |  PORTS   | 
-  | :-----------: | :------------------------: | :-----------------------------: | :----------: |  :--------------------: | :------------------------: | :------- | :------: |
-  | x06k7hbl96lz  |     objective.allen.1      |  aluracursos/barbearia:latest   |      vm3     |        Running          |  Running 6 minutes ago     |          |          |
-  | n27sa3uw017c  |     \_objective.allen.1    |  aluracursos/barbearia:latest   |      vm2     |        Shutdown         |  Failed about a second ago |          |          |
+  |      ID       |            NAME            |              IMAGE              |   NODE   |   DESIRED STATE   |     CURRENT STATE          |   ERROR  |  PORTS   | 
+  | :-----------: | :------------------------: | :-----------------------------: | :------: | :---------------: | :------------------------: | :------- | :------: |
+  | x06k7hbl96lz  |     objective.allen.1      |  aluracursos/barbearia:latest   |    vm3   |    Running        |  Running 6 minutes ago     |          |          |
+  | n27sa3uw017c  |     \_objective.allen.1    |  aluracursos/barbearia:latest   |    vm2   |    Shutdown       |  Failed about a second ago |          |          |
 
 * Gerenciando o cluster com managers
   * __```docker swarm leave --force```__ - pelo ssh da VM manager é forçada a saída do cluster swarm, consequentemente toda a configuração se perde, e os workers ficam sem manage.
@@ -73,5 +73,13 @@ Segue a lista com os principais comandos utilizados durante o curso:
  
 
 * Deploy com Docker Stack
-  * __```hostname -i```__ - mostra o ip atribuído ao container pelo docker (funciona apenas dentro do container).
+  * __[docker-compose.yml](https://github.com/pvreboucas/docker-swarm-orquestrador/blob/aula-07/docker-compose.yml)__ - arquivo de composição de serviços usado através do comando docker-compose em um nó manager.
+  * __```docker stack deploy --compose-file docker-compose.yml NOME_STACK```__ - cria uma stack de arquivos a partir de um compositor docker-compose.yml.
+  * __```docker stack ls```__ - apresenta a lista de stack de serviços. 
+  
+  |  NAME  |  SERVICES | ORCHESTRATOR |
+  | :----: | :-------: | :----------: |
+  |  vote  |     6     |    Swarm     | 
+  
+  * __```docker stack rm NOME_STACK```__ - remove a stack de serviços. 
 
